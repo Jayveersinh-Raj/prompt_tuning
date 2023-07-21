@@ -19,7 +19,7 @@ This is the dataset that contains bad prompts with corresponding improved prompt
     from peft import PeftModel, PeftConfig
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
-    peft_model_id = "autopilot-ai/bloom-prompt-tuner"
+    peft_model_id = "" # The peft model id
     config = PeftConfig.from_pretrained(peft_model_id)
     model_loaded = AutoModelForCausalLM.from_pretrained(config.base_model_name_or_path, return_dict=True, load_in_8bit=False, device_map='auto')
     tokenizer = AutoTokenizer.from_pretrained(config.base_model_name_or_path)
